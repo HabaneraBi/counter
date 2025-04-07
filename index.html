@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Counter</title>
+  </head>
+  <body>
+    <h1 id="h1">Счётчик</h1>
+    <div class="content1">
+      <div class="inputs">
+        <input class="el_input" placeholder="Дни.." type="number" />
+        <input class="el_input" placeholder="Часы.." type="number" />
+        <input class="el_input" placeholder="Минуты.." type="number" />
+        <input class="el_input" placeholder="Секунды.." type="number" />
+      </div>
+      <button class="start" id="start">Начать отсчёт</button>
+    </div>
+
+    <div id="buttons" class="buttons">
+      <button class="close" id="close">
+        <svg id="svg" viewBox="0 0 20 20">
+          <line x1="0" y1="0" x2="20" y2="20" stroke="black" stroke-width="3" />
+          <line x1="20" y1="0" x2="0" y2="20" stroke="black" stroke-width="3" />
+        </svg>
+      </button>
+    </div>
+    <div class="content2">
+      <p class="p" id="p"></p>
+
+      <button class="stop" id="stop">Закрыть</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

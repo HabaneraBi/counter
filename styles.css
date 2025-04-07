@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@font-face {
+  font-family: "digital";
+  src: url(MOSCOW2024.otf);
+}
+* {
+  font-family: "Open Sans";
+}
+
+html,
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(day.png);
+  background-size: cover;
+}
+
+.content1 {
+  display: flex;
+  column-gap: 15px;
+  width: 40%;
+  justify-content: center;
+  align-items: start;
+  margin-top: 40px;
+}
+
+.content1 button {
+  height: 53px;
+}
+
+.p {
+  font-family: "digital";
+  height: 20px;
+  padding: 10px;
+  margin-top: 25px;
+  color: rgb(0, 253, 240);
+  border: 1px solid rgb(0, 247, 255);
+  background-color: rgb(86, 86, 255);
+  border-radius: 4px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  row-gap: 4px;
+}
+
+.el_input {
+  background-color: rgb(153, 153, 253);
+  color: rgb(41, 4, 250);
+  border: 1px solid rgb(69, 68, 70);
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+.el_input::-webkit-input-placeholder {
+  color: rgb(90, 90, 90);
+}
+
+.el_input:focus {
+  background-color: rgb(126, 126, 255);
+  outline: none;
+}
+
+.start,
+.close {
+  font-size: 0.9rem;
+  background-color: rgb(188, 153, 253);
+  border: 1px solid rgb(69, 68, 70);
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+:is(.start, .close, .stop):hover {
+  background-color: rgb(175, 132, 255);
+}
+
+:is(.start, .close, .stop):active {
+  background-color: rgb(152, 98, 252);
+  transition: background-color 0s;
+}
+
+.start:disabled {
+  background-color: rgb(196, 164, 255);
+  color: rgb(73, 73, 73);
+  opacity: 0.7;
+  cursor: auto;
+}
+
+.buttons {
+  background-color: rgb(118, 118, 255);
+  margin-top: 40px;
+  display: flex;
+  justify-content: end;
+  width: 25%;
+  border: 1px solid black;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.buttons_anima {
+  opacity: 1;
+}
+
+.buttons * {
+  margin: 0;
+}
+
+.close {
+  border: 0;
+  width: 20px;
+  height: 20px;
+  align-self: flex-end;
+}
+
+.close svg {
+  width: 100%;
+  height: 100%;
+}
+
+.content2 {
+  background-color: rgb(153, 153, 253);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  border: 0;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  justify-content: space-between;
+  height: 150px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.content2_anima {
+  opacity: 1;
+}
+
+.but {
+  margin-bottom: 10px;
+}
+
+.stop {
+  font-size: 1rem;
+  background-color: rgb(188, 153, 253);
+  border: 1px solid rgb(69, 68, 70);
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 5px;
+}
+
+h1 {
+  color: black;
+  font-size: 3rem;
+}
