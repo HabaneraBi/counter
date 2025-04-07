@@ -10,6 +10,19 @@ const stop = document.getElementById("stop");
 const body = document.getElementsByTagName("body")[0];
 const h1 = document.getElementById("h1");
 
+function styleTime() {
+  const forStyle = new Date();
+  if (forStyle.getHours() >= 21 || forStyle.getHours() < 5) {
+    body.style.backgroundImage = "url(kos.png)";
+    h1.style.color = "white";
+  } else {
+    body.style.backgroundImage = "url(day.png)";
+    h1.style.color = "black";
+  }
+}
+
+styleTime();
+
 let acting;
 const openBut = document.createElement("button");
 
@@ -18,7 +31,10 @@ function mainProc() {
   inputs.forEach((el) => {
     inpVal.push(el.value);
   });
-  if (inpVal.every((el) => el === "") && !localStorage.getItem("data")) {
+  if (
+    (inpVal.every((el) => el === "") || inpVal.some((el) => +el < 0)) &&
+    !localStorage.getItem("data")
+  ) {
     return;
   }
   startButton.disabled = true;
@@ -43,14 +59,8 @@ function mainProc() {
       return;
     }
 
-    const forStyle = new Date();
-    if (forStyle.getHours() >= 21 || forStyle.getHours() < 5) {
-      body.style.backgroundImage = "url(kos.png)";
-      h1.style.color = "white";
-    } else {
-      body.style.backgroundImage = "url(day.png)";
-      h1.style.color = "black";
-    }
+    styleTime();
+
     valTime -= 1000;
     localStorage.removeItem("data");
     localStorage.setItem("data", valTime);
